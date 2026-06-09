@@ -1,6 +1,6 @@
-﻿<div align="center">
+<div align="center">
 
-# Sapphari
+# AI Creative Platform
 
 **An AI creative platform**
 
