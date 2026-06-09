@@ -1,72 +1,132 @@
-﻿# Sapphari — The Creative Platform
+﻿<div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js-15-000000) ![React](https://img.shields.io/badge/React-19-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6) ![Tailwind](https://img.shields.io/badge/Tailwind-v4-38BDF8) ![Three.js](https://img.shields.io/badge/Three.js-3D_globe-000000) ![Framer Motion](https://img.shields.io/badge/Framer-Motion-0055FF) ![status](https://img.shields.io/badge/status-prototype-orange)
+# Sapphari
 
-> Sapphari is a "Creative Platform" built on one motto — **Design anything. Design everything.** It pairs a world-class catalog of apps and tech stacks with an AI advisor and a project workspace, so creators, developers, designers, and R&D teams can discover the right tools, assemble a stack, and build.
+**An AI creative platform**
 
-<p align="center"><img src="screenshots/01.png" width="820"/></p>
-<p align="center">
-  <img src="screenshots/02.png" width="405"/>
-  <img src="screenshots/03.png" width="405"/>
-</p>
-<p align="center"><img src="screenshots/04.png" width="820"/></p>
+[![Next.js](https://img.shields.io/badge/Next.js-000?logo=next.js&logoColor=white)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Status](https://img.shields.io/badge/status-MVP-orange)]()
 
-## The Vision
+*Turn briefs and prompts into creative assets, organized in one workspace.*
 
-A single dashboard to create, edit, improve, design, augment, and learn anything. At its heart is a continuously expanding glossary of the tools and platforms of modern software — databases, AI/LLM tooling, design, marketing, automation, CRMs, CMSs — paired with an AI agent that recommends the right combination for whatever you are building.
+</div>
 
-## Two Experiences
+---
 
-### Marketing site (logged-out)
-A deliberately non-generic landing experience: an interactive 3D globe hero, light/dark theming, multi-language support (EN/ES/FR/DE/PT/JA/ZH), and the full professional surface — features, pricing, resources, community, docs, blog, careers, changelog, roadmap, glossary, tutorials, plus legal pages (privacy, security, GDPR, terms).
+## What Is This?
 
-### Dashboard (logged-in)
-A workspace organized around a left-nav of **Home, Apps, Files, Projects, Learn, Community, Resources, Settings**. The home screen surfaces recent apps and files, active projects, community highlights, and quick actions (new project, install integrations, take a tour, explore plans).
+Sapphari is an AI creative platform. Users go from a prompt or brief to generated creative assets, then organize, iterate, and export them from a project workspace.
 
-## Core Features
+---
 
-- **AI Stack Assistant** — a conversational recommendation engine: describe what you are building and it proposes a fitting stack.
-- **Apps Catalog** — a large, searchable, categorized database of tools and platforms, each with developer, description, category, rating, review count, pricing model, deployment type, learning curve, tags, and website.
-- **Tech-Stack Builder** — assemble and customize a stack for a specific project.
-- **Projects & Files** — organize work, files, and active builds.
-- **Learn & Community** — tutorials, resources, and a community layer for creators and teams.
+## Features
 
-## Design
+| Feature | Description | Status |
+|---|---|:---:|
+| Creative workspace | Projects and asset library | ✅ |
+| AI generation | Prompt-to-asset creation | ✅ |
+| Iteration | Refine and version outputs | 🚧 |
+| Export | Download and share assets | 🚧 |
+| Templates | Reusable creative starting points | 🚧 |
 
-Built to avoid generic AI aesthetics — drawing on Stripe, Linear, Vercel, Raycast, and Arc: an interactive Three.js globe, Framer Motion micro-interactions, glass-morphism surfaces, a considered light/dark system, and contemporary typography (Geist).
+---
+
+## How It Works
+
+```
+Prompt / brief
+     │
+     ▼
+AI creative engine ──▶ generated assets
+     │
+     ▼
+Workspace (projects · library · export)
+```
+
+---
 
 ## Tech Stack
 
 | Layer | Technology |
-|---|---|
-| Framework | Next.js 15 (App Router) |
-| Language | TypeScript · React 19 |
-| Styling | Tailwind CSS v4 · shadcn/ui · Radix |
-| 3D / motion | Three.js · Framer Motion |
-| Data viz | Recharts |
-| Forms | react-hook-form · Zod |
-| Theming | next-themes · Geist |
+|-------|------------|
+| Frontend | Next.js, React, TypeScript |
+| Styling | Tailwind CSS, shadcn/ui |
+| AI | Generation layer |
 
-## Routes
-/                    landing (3D globe hero)
-/dashboard           workspace home
-/dashboard/apps      AI stack advisor + apps catalog
-/dashboard/projects  projects
-docs · integrations · resources · glossary · tutorials · community · blog · careers · changelog · roadmap
-login · signup · forgot-password
-about · contact · help · privacy · security · gdpr · terms
+---
 
-## Run It
+## Project Structure
 
-```bash
-pnpm install
-pnpm dev
+```
+sapphari-ai-creative-platform/
+app/
+   about/
+   blog/
+   careers/
+   changelog/
+   community/
+   contact/
+components/
+   apps/
+   ui/
+   creative.tsx
+   dashboard-header.tsx
+   dashboard-sidebar.tsx
+   features-section.tsx
+hooks/
+   use-mobile.ts
+   use-toast.ts
+lib/
+   auth-context.tsx
+   tools-database.ts
+   utils.ts
+public/
+   placeholder-logo.png
+   placeholder-logo.svg
+   placeholder-user.jpg
+   placeholder.jpg
+   placeholder.svg
+styles/
+   globals.css
+.gitignore
+components.json
+next.config.mjs
+next-env.d.ts
+package.json
+pnpm-lock.yaml
+postcss.config.mjs
+README.md
+tsconfig.json
 ```
 
-## Status
+---
 
-Prototype. Front-end is functional on a built-in catalog dataset, with the non-generic design system in place. Not connected to a live backend; not audited.
+## Screenshots
 
-## Disclaimer
+<table>
+<tr><td width="50%"><img src="screenshots/01.png" width="100%" /></td><td width="50%"><img src="screenshots/02.png" width="100%" /></td></tr>
+<tr><td width="50%"><img src="screenshots/03.png" width="100%" /></td><td width="50%"><img src="screenshots/04.png" width="100%" /></td></tr>
+</table>
 
-Prototype / portfolio artifact. App and platform names in the catalog are referenced descriptively.
+---
+
+## Getting Started
+
+```bash
+npm install --legacy-peer-deps --ignore-scripts
+npx next dev
+```
+
+---
+
+## Notes
+
+Shared as a portfolio artifact demonstrating product and system design. Early prototype, not a finished product.
+
+<div align="center">
+
+MIT
+
+</div>
